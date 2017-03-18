@@ -19,7 +19,7 @@ for iter = 1:num_iters
 
     h = X * theta
 
-    J = 1/(2*m) * sum((h - y) * X(iter))
+    J = 1/(2*m) * sum((h - y) * X(iter, 2))
 
     theta = theta - (alpha / m *  J)
 
