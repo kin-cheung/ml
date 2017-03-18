@@ -19,7 +19,7 @@ for iter = 1:num_iters
 
     h = X * theta;
 
-    J = sum((h - y) .* X);
+    J = sum((h - y));
 
     theta = theta - (alpha / m *  J);
 
