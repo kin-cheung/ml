@@ -1,1 +1,3 @@
-disp("Hello World");
+function y = f(x)
+
+y = disp(x);
