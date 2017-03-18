@@ -1,5 +1,5 @@
 function submitWithConfiguration(conf)
-  addpath('./lib/jsonlab');
+  addpath('');
 
   parts = parts(conf);
 
