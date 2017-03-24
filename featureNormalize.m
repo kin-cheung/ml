@@ -29,7 +29,7 @@ sigma = zeros(1, size(X, 2));
 m = size(X, 1);
 
 mean = mean(X);
-mu = (X - mean)
+mu = (X - mean);
 
 sigma = std(X);
 
