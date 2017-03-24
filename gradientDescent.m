@@ -27,8 +27,7 @@ for iter = 1:num_iters
 
     % Save the cost J in every iteration    
     J_history(iter) = computeCost(X, y, theta);
-
-    %disp(sprintf('cost: %0.4f', J_history(iter)));
+    
 end
 
 end
