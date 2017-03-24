@@ -26,12 +26,13 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
+mu = sum(X) ./ size(X, 1);
 
+m = size(X, 2);
+v = (sum(X - mu) .^ 2) ./ m
+sigma = v .^ (1/2);
 
-
-
-
-
+X_norm = (X - mu) / sigma;
 
 
 % ============================================================
