@@ -25,7 +25,8 @@ s = sum((-y .* log(h)) - ((1 - y) .* log(1 - h)));
 inflation = (lambda / (2*m)) * sum(theta.^2);
 J = ((1/m) .* s) + inflation;
 
-grad = (1/m) .* sum((h - y) .* X);
+d_inflation = (lambda / m)  .* theta;
+grad = ((1/m) .* sum((h - y) .* X)) + d_inflation;
 
 
 % =============================================================
