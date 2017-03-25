@@ -23,11 +23,12 @@ grad = zeros(size(theta));
 h = sigmoid(theta' * X')';
 s = sum((-y .* log(h)) - ((1 - y) .* log(1 - h)));
 inflation = (lambda / (2*m)) * sum(theta.^2);
+inflation(1) = 0;
 J = ((1/m) .* s) + inflation;
 
 d_inflation = (lambda / m)  .* theta;
 d_inflation(1) = 0;
-grad = ((1/m) .* sum((h - y) .* X));
+grad = ((1/m) .* sum((h - y) .* X)) + d_inflation';
 
 
 % =============================================================
