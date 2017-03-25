@@ -26,8 +26,8 @@ inflation = (lambda / (2*m)) * sum(theta.^2);
 J = ((1/m) .* s) + inflation;
 
 d_inflation = (lambda / m)  .* theta;
-d_inflation[1] = 0
-grad = ((1/m) .* sum((h - y) .* X)) + d_inflation;
+d_inflation(1) = 0;
+grad = ((1/m) .* sum((h - y) .* X)) ;
 
 
 % =============================================================
