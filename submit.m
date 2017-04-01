@@ -1,5 +1,5 @@
 function submit()
-  addpath('./lib');
+  addpath('');
 
   conf.assignmentSlug = 'multi-class-classification-and-neural-networks';
   conf.itemName = 'Multi-class Classification and Neural Networks';
