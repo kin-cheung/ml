@@ -10,29 +10,9 @@ num_labels = size(Theta2, 1);
 % You need to return the following variables correctly 
 p = zeros(size(X, 1), 1);
 
-% ====================== YOUR CODE HERE ======================
-% Instructions: Complete the following code to make predictions using
-%               your learned neural network. You should set p to a 
-%               vector containing labels between 1 to num_labels.
-%
-% Hint: The max function might come in useful. In particular, the max
-%       function can also return the index of the max element, for more
-%       information see 'help max'. If your examples are in rows, then, you
-%       can use max(A, [], 2) to obtain the max for each row.
-%
-
-% Add ones to the X data matrix
-X = [ones(m, 1) X];
-
-z = Theta1 * X';
-a_3 = sigmoid(z);
-a_3 = a_3';
-a_3 = [ones(m, 1) a_3];
-z = a_3 * Theta2';
-H = sigmoid(z);
-
-[x,xi] = max(H, [], 2);
-p = xi;
+h1 = sigmoid([ones(m, 1) X] * Theta1');
+h2 = sigmoid([ones(m, 1) h1] * Theta2');
+[dummy, p] = max(h2, [], 2);
 
 % =========================================================================
 
